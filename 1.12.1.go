@@ -4,12 +4,27 @@ import "fmt"
 
 func main() {
 
-	var i uint8
 	var workArray [10]uint8
-	for m := 0; m < len(workArray); m++ {
-		fmt.Scan(&i)
-		workArray[m] = i
+	var j uint8
+	var (
+		o uint8
+		l uint8
+	)
+	var k=0
+	for i := range workArray {
+		fmt.Scan(&j)
+		workArray[i] = j
 	}
-	
-	fmt.Println(workArray)
+	for i := 0; i < 5; i++ {
+		fmt.Scan(&k, &l)
+		o = workArray[k]
+		workArray[k] = workArray[l]
+		workArray[l] = o
+	}
+
+	for _, x := range workArray {
+		fmt.Print(x, " ")
+	}
+	fmt.Printf("type ok")
+	return
 }
