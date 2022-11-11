@@ -10,7 +10,7 @@ func main() {
 		o uint8
 		l uint8
 	)
-	var k=0
+	var k = 0
 	for i := range workArray {
 		fmt.Scan(&j)
 		workArray[i] = j
